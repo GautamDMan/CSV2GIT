@@ -4,7 +4,10 @@ $Path = "c:\Users\gauta_000\Desktop\csv2git\fo_mktlots.csv"
 $date = Get-Date
 
 #GET THE DATA IN FORM OF csv WITH CORRECYT HEADER INFO INTO LOCAL DIR
-Invoke-WebRequest $Url -Headers @{"accept"="application/csv"} > $Path
+#Invoke-WebRequest $Url -Headers @{"accept"="application/csv"} > $Path
+
+Invoke-WebRequest $Url -Headers @{"accept"="application/csv"} -OutFile $Path
+
 
 ###  the github url path is >> https://github.com/GautamDMan/CSV2GIT.git
 Set-Location C:\Users\gauta_000\Desktop\csv2git\
